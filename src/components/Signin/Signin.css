@@ -1,0 +1,19 @@
+.mt3{
+    height: 60px;
+    background-color: rgb(58, 35, 44);
+}
+
+.mv3{
+    height: 60px;
+    background-color: rgb(58, 35, 44);
+}
+
+.enter{
+    top: -15px;
+}
+
+.login-box{
+    position: fixed;
+    top: 40%;
+    left:5%;
+}

@@ -2,6 +2,20 @@
   text-align: center;
 }
 
+input[type="email"]
+{
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    outline: none;
+}
+
+input[type="password"]
+{
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    outline: none;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
