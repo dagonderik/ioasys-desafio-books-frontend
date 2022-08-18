@@ -1,7 +1,7 @@
 {
-  "main.css": "/ioasys-desafio-books-frontend/static/css/main.0621d7eb.chunk.css",
-  "main.js": "/ioasys-desafio-books-frontend/static/js/main.c9f8916d.chunk.js",
-  "main.js.map": "/ioasys-desafio-books-frontend/static/js/main.c9f8916d.chunk.js.map",
+  "main.css": "/ioasys-desafio-books-frontend/static/css/main.8f5c5bd1.chunk.css",
+  "main.js": "/ioasys-desafio-books-frontend/static/js/main.58e645f0.chunk.js",
+  "main.js.map": "/ioasys-desafio-books-frontend/static/js/main.58e645f0.chunk.js.map",
   "static/js/1.fbd0924d.chunk.js": "/ioasys-desafio-books-frontend/static/js/1.fbd0924d.chunk.js",
   "static/js/1.fbd0924d.chunk.js.map": "/ioasys-desafio-books-frontend/static/js/1.fbd0924d.chunk.js.map",
   "static/css/2.b56bb24a.chunk.css": "/ioasys-desafio-books-frontend/static/css/2.b56bb24a.chunk.css",
@@ -9,9 +9,9 @@
   "static/js/2.50a4ef36.chunk.js.map": "/ioasys-desafio-books-frontend/static/js/2.50a4ef36.chunk.js.map",
   "runtime~main.js": "/ioasys-desafio-books-frontend/static/js/runtime~main.73a3215c.js",
   "runtime~main.js.map": "/ioasys-desafio-books-frontend/static/js/runtime~main.73a3215c.js.map",
+  "static/css/main.8f5c5bd1.chunk.css.map": "/ioasys-desafio-books-frontend/static/css/main.8f5c5bd1.chunk.css.map",
   "static/css/2.b56bb24a.chunk.css.map": "/ioasys-desafio-books-frontend/static/css/2.b56bb24a.chunk.css.map",
-  "static/css/main.0621d7eb.chunk.css.map": "/ioasys-desafio-books-frontend/static/css/main.0621d7eb.chunk.css.map",
   "index.html": "/ioasys-desafio-books-frontend/index.html",
-  "precache-manifest.555ad0cf45c9ca8c9a96ac4833186b73.js": "/ioasys-desafio-books-frontend/precache-manifest.555ad0cf45c9ca8c9a96ac4833186b73.js",
+  "precache-manifest.1709e6db56b6d168c6bb2daa3507e7ec.js": "/ioasys-desafio-books-frontend/precache-manifest.1709e6db56b6d168c6bb2daa3507e7ec.js",
   "service-worker.js": "/ioasys-desafio-books-frontend/service-worker.js"
 }
