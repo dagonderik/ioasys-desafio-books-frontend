@@ -31,6 +31,8 @@ const modalConfig = {
     }
   }
 
+  
+
 const Home = ({ onRouteChange, color, bookList, user, route, showModal, handleCloseModal}) =>{
 
     return(
@@ -48,13 +50,17 @@ const Home = ({ onRouteChange, color, bookList, user, route, showModal, handleCl
                     onRouteChange={onRouteChange} />
                     <CardList bookList={bookList.data}
                     onRouteChange={onRouteChange} />
-                    <PageSelector bookList={bookList}/>
+                    <PageSelector 
+                    onRouteChange={onRouteChange}
+                    bookList={bookList}/>
                     <ReactModal 
-                    //style={modalConfig}
+                        onRequestClose={handleCloseModal}
+                        appElement={document.getElementById('app')}
+                    style={modalConfig}
                         isOpen={showModal}
                         contentLabel="Book Details"
                         >
-                        <button className='br4 b f5' style={{ position: "absolute", right:"0"  }} onClick={handleCloseModal}>❌</button>
+                        <button className='br4 b f5' style={{ position: "absolute", right:"0"  }} onClick={handleCloseModal}><span role='img' aria-label='Close'>❌</span></button>
                         <BookInformation
                         route={route}
                         bookList={bookList.data}/>

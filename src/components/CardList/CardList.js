@@ -5,11 +5,11 @@ const CardList = ({bookList, onRouteChange}) => {
     return (
         <div>
             {
-                bookList.map((key,i) => {
+                bookList.map((user,i) => {
                     return (
                         <Cards
+                            key={bookList[i].title}
                             onRouteChange={onRouteChange}    
-                            key={i}
                             id={i}
                             authors={bookList[i].authors}
                             title={bookList[i].title}

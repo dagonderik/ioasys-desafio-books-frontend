@@ -3,7 +3,7 @@ import React,{Component} from 'react';
 import Signin from './components/Signin/Signin';
 import axios from 'axios';
 import Home from './components/Home/Home';
-
+import ReactModal from 'react-modal';
 
 
 class App extends Component {
@@ -52,6 +52,9 @@ class App extends Component {
     this.setState({bookClicked: id})
   }
 
+  componentDidMount() {
+    ReactModal.setAppElement('body');
+}
 
   onRouteChange = (route) => { 
     if(route === "login"){
@@ -66,7 +69,6 @@ class App extends Component {
       } else{
           this.setState({route: route})
           this.handleOpenModal()
-          console.log(this.state.route)
       }
         
   }
@@ -87,7 +89,6 @@ class App extends Component {
             })
               .then((response) => {
                 this.setState({bookList: response.data})
-                console.log(response.data)
                 this.onRouteChange('home');
                 
             })
