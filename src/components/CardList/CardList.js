@@ -1,14 +1,16 @@
 import React from 'react';
 import Cards from '../Cards/Cards.js';
 
-const CardList = ({bookList}) => {
+const CardList = ({bookList, onRouteChange}) => {
     return (
-        <div style={{flex: 2, flexDirection: 'row', flexWrap: 'wrap'}}>
+        <div>
             {
-                bookList.map((user,i) => {
+                bookList.map((key,i) => {
                     return (
-                        <Cards    
+                        <Cards
+                            onRouteChange={onRouteChange}    
                             key={i}
+                            id={i}
                             authors={bookList[i].authors}
                             title={bookList[i].title}
                             pageCount={bookList[i].pageCount}

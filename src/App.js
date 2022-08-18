@@ -11,14 +11,16 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+    showModal: false,
     route: "login", 
     color: "linear-gradient(89deg, rgb(116, 5, 38) 0%, rgb(210, 63, 240) 100%)",
     isSignedIn: false,
-    email: "desafio@ioasys.com.br",
-    password: "12341234",
+    email: "",
+    password: "",
     user: "",
     token: "",
-    bookList: ""
+    bookList: "",
+    bookClicked: ""
     }
   }
 
@@ -38,6 +40,19 @@ class App extends Component {
     this.setState({color: color})
   }
 
+  handleOpenModal = () => {
+    this.setState({ showModal: true });
+  }
+  
+  handleCloseModal = () => {
+    this.setState({ showModal: false });
+  }
+
+  selectBook = (id) => {
+    this.setState({bookClicked: id})
+  }
+
+
   onRouteChange = (route) => { 
     if(route === "login"){
       this.setState({route: route})
@@ -48,7 +63,12 @@ class App extends Component {
         this.colorChange('linear-gradient(89deg, rgb(241, 239, 239) 0%, rgb(240, 209, 247) 100%)')
         this.setState({password: ""})
         this.setState({email: ""})
+      } else{
+          this.setState({route: route})
+          this.handleOpenModal()
+          console.log(this.state.route)
       }
+        
   }
 
   onSubmmit = () => {
@@ -61,8 +81,6 @@ class App extends Component {
           .then((res) => {
             this.setState({user: res})
             this.setState({token: res.headers.authorizaton})
-            console.log(res)
-            console.log(this.state.token)
             axios.get("https://books.ioasys.com.br/api/v1/books?page=1&amount=12",{
               headers: { Authorization: `Bearer ${res.headers.authorization}` 
               }
@@ -92,6 +110,10 @@ class App extends Component {
         color={this.state.color}
         />
           :<Home 
+          showModal={this.state.showModal}
+          handleCloseModal={this.handleCloseModal}
+          route={this.state.route}
+          user={this.state.user}
           onRouteChange={this.onRouteChange}
           color={this.state.color}  
           bookList={this.state.bookList}/> 
