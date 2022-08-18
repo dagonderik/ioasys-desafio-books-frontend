@@ -10,10 +10,50 @@
 
 .enter{
     top: -15px;
+    min-height: 40px;
+    min-width: 90px;
 }
 
 .login-box{
     position: fixed;
     top: 40%;
     left:5%;
+    min-width: 500px;
 }
+
+.full-box{
+	overflow: auto;
+	height: 100vh;
+}
+
+/* p {
+
+	position: relative;
+	max-width: 30em;
+	background-color: #fff;
+	padding: 1.125em 1.5em;
+	font-size: 1.25em;
+	border-radius: 0.5rem;
+
+}
+
+p::before {
+
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	bottom: 100%;
+	left: 1.5em; 
+	border: .75rem solid transparent;
+	border-top: none;
+
+
+	border-bottom-color: #fff;
+	filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
+} */
+
+/* body{
+    background-image: url("./Screenshot\ 2022-08-17\ 114835.png");
+    background-repeat: no-repeat;
+} */

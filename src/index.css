@@ -1,9 +1,9 @@
-body {
+body,html {
   margin: 0;
+  padding: 0;
   font-family: 'Avenir', Courier, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(89deg, rgb(116, 5, 38) 0%, rgb(210, 63, 240) 100%);
 }
 
 code {
