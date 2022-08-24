@@ -21,7 +21,6 @@ class App extends Component {
     user: "",
     token: "",
     bookList: {},
-    bookClicked: {},
     page: 1
     }
   }
@@ -48,10 +47,6 @@ class App extends Component {
   
   handleCloseModal = () => {
     this.setState({ showModal: false });
-  }
-
-  selectBook = (id) => {
-    this.setState({bookClicked: id});
   }
 
   changePage = (action) => {
