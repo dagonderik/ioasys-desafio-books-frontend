@@ -1,4 +1,5 @@
 import React from 'react';
+import './BookInformation.css'
 
 const BookInformation = ({route, bookList}) => {
     return (

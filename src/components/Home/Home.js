@@ -1,10 +1,12 @@
 import React from 'react';
 import Navigation from '../Navigation/Navigation';
 import './Home.css';
-import CardList from '../CardList/CardList.js'
-import PageSelector from '../PageSelector/PageSelector.js'
+import CardList from '../CardList/CardList.js';
+import PageSelector from '../PageSelector/PageSelector.js';
 import ReactModal from 'react-modal';
 import BookInformation from '../BookInformation/BookInformation';
+import {AiOutlineCloseCircle} from 'react-icons/ai';
+
 
 const modalConfig = {
     overlay: {
@@ -13,7 +15,7 @@ const modalConfig = {
       left: 0,
       right: 0,
       bottom: 0,
-      backgroundColor: 'rgba(0, 0, 0, 0.55)'
+      backgroundColor: 'rgba(0, 0, 0, 0.32)'
     },
     content: {
       position: 'absolute',
@@ -48,26 +50,25 @@ const Home = ({ onRouteChange, color, bookList, user, route, showModal, handleCl
                 :<><Navigation
                     user={user}
                     onRouteChange={onRouteChange} />
-                    <CardList bookList={bookList.data}
+                    <CardList 
+                    bookList={bookList.data}
                     onRouteChange={onRouteChange} />
                     <PageSelector 
                     onRouteChange={onRouteChange}
                     bookList={bookList}
                     changePage={changePage}/>
                     <ReactModal 
-                        onRequestClose={handleCloseModal}
-                        appElement={document.getElementById('app')}
+                    onRequestClose={handleCloseModal}
+                    appElement={document.getElementById('app')}
                     style={modalConfig}
-                        isOpen={showModal}
-                        contentLabel="Book Details"
-                        
-                        >
-                        <button className='br4 b f5' style={{ position: "absolute", right:"0"  }} onClick={handleCloseModal}><span role='img' aria-label='Close'>❌</span></button>
+                    isOpen={showModal}
+                    contentLabel="Book Details">
+                        <AiOutlineCloseCircle style={{ position: "absolute", right:"0", width:"30", height:"30" }}  onClick={handleCloseModal}/>
                         <BookInformation
                         route={route}
                         bookList={bookList.data}/>
                     </ReactModal>
-                    </>
+                </>
             }
         </div>
     )

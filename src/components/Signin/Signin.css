@@ -24,13 +24,13 @@
 @media (max-width:500px) {
 	.full-box {
 		background-size:cover;
-		background-position: bottom 0px right -550px ;
+		background-position: top 0px left -550px ;
 	}
 }
 
 @media (min-width:500px) {
 	.full-box {
 		background-size:cover;
-		background-position: bottom right;
+		background-position: top right;
 	}
 }

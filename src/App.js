@@ -39,7 +39,7 @@ class App extends Component {
   } 
 
   colorChange = (color) => {
-    this.setState({color: color})
+    this.setState({color: color});
   }
 
   handleOpenModal = () => {
@@ -51,22 +51,21 @@ class App extends Component {
   }
 
   selectBook = (id) => {
-    this.setState({bookClicked: id})
+    this.setState({bookClicked: id});
   }
 
   changePage = (action) => {
     if (action === "forward" && this.state.page <= this.state.bookList.totalPages){
-      this.setState({page: this.state.page+1})
+      this.setState({page: this.state.page+1});
       this.pageUpdate(this.state.page+1);
-      // this.onSubmit()
     } else if (action === "back" && this.state.page >=2) {
-      this.setState({page: this.state.page-1})
+      this.setState({page: this.state.page-1});
       this.pageUpdate(this.state.page-1);
     }
   }
 
   pageUpdate =(page) => {
-    this.onSubmit()
+    this.onSubmit();
   }
 
   componentDidMount() {
@@ -75,17 +74,17 @@ class App extends Component {
 
   onRouteChange = (route) => { 
     if(route === "login"){
-      this.setState({route: route})
-      this.setState({password: ""})
-      this.setState({email: ""})
+      this.setState({route: route});
+      this.setState({password: ""});
+      this.setState({email: ""});
     } else 
       if (route === "home"){
-        this.setState({route: route})
-        this.colorChange('linear-gradient(89deg, rgb(241, 239, 239) 0%, rgb(240, 209, 247) 100%)')
+        this.setState({route: route});
+        this.colorChange('linear-gradient(89deg, rgb(241, 239, 239) 0%, rgb(240, 209, 247) 100%)');
 
       } else{
-          this.setState({route: route})
-          this.handleOpenModal()
+          this.setState({route: route});
+          this.handleOpenModal();
       }
         
   }
@@ -96,33 +95,27 @@ class App extends Component {
         password: this.state.password
       }
   
-      axios.post("https://books.ioasys.com.br/api/v1/auth/sign-in", body)
-        .then((res) => {
-          this.setState({user: res})
-          this.setState({token: res.headers.authorizaton})
-          return axios.get(`https://books.ioasys.com.br/api/v1/books?page=${this.state.page}}&amount=12`,{
-            headers: { Authorization: `Bearer ${res.headers.authorization}` 
-            }
-          })
+    axios.post("https://books.ioasys.com.br/api/v1/auth/sign-in", body)
+      .then((res) => {
+        this.setState({user: res});
+        this.setState({token: res.headers.authorizaton});
+        return axios.get(`https://books.ioasys.com.br/api/v1/books?page=${this.state.page}}&amount=12`,{
+          headers: { Authorization: `Bearer ${res.headers.authorization}` 
+          }
+        })
+          
             
-              
-        })
-        .then((response) => {
-          this.setState({bookList: response.data})
-          this.onRouteChange('home');
-        })
-        .catch((err) => {
-        console.log(err);
-          // if (err.response) { 
-          //   // client received an error response (5xx, 4xx)
-          //   console.log("error")
-          // } else if (err.request) { 
-          //   // client never received a response, or request never left 
-          // } else { 
-          //   // anything else 
-          // }
-        })   
-   }
+      })
+      .then((response) => {
+        this.setState({bookList: response.data});
+        this.onRouteChange('home');
+      })
+      .catch((err) => {
+        if (err.response.statusText === "Unauthorized") {
+          alert("Email e/ou senha incorretos.")
+        }
+      })   
+  }
 
   render(){
     return (
