@@ -4,7 +4,7 @@ const Navigation = ({ onRouteChange, user }) =>{
     return(
     <nav style={{display: 'flex', justifyContent: 'space-between'}}>
         <p className="black  f1  "><b>ioasys</b> Books</p>
-        <p onClick={() => onRouteChange('login')} className='f3  dim black pa3 pointer'>Bem vindo, {user.data.name}! <span role='img' aria-label='Logout'>🔙</span></p>
+        <p className='f3 black pa3'>Bem vindo, {user.data.name}! <span className='dim pointer' onClick={() => onRouteChange('login')} role='img' aria-label='Logout'>🔙</span></p>
     </nav>
     )
 }

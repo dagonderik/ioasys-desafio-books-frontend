@@ -2,10 +2,10 @@ import React from 'react';
 
 const BookInformation = ({route, bookList}) => {
     return (
-        <div>
-            <img alt='' src={`${bookList[route].imageUrl}`} style={{display:"inline-block", minWidth:"30vh", maxWidth:"50vh", height:"10%", align: "center",verticalAlign: "middle"}} />
+        <div id='bookList'>
+            <img alt='' src={`${bookList[route].imageUrl}`} style={{display:"inline-block", maxWidth:"30vh", height:"10%", align: "center",verticalAlign: "middle"}} />
         
-            <div style={{display:"inline-block", verticalAlign: "middle", marginLeft: "10px"}}>
+            <div style={{ display:"inline-block", verticalAlign: "middle", marginLeft: "10px"}}>
             <h1 className='black f1'>{bookList[route].title}</h1>
             <p className='hot-pink f4'>
                 {bookList[route].authors.map((user,i) => {

@@ -8,7 +8,7 @@ const CardList = ({bookList, onRouteChange}) => {
                 bookList.map((user,i) => {
                     return (
                         <Cards
-                            key={bookList[i].title}
+                            key={bookList[i].id}
                             onRouteChange={onRouteChange}    
                             id={i}
                             authors={bookList[i].authors}

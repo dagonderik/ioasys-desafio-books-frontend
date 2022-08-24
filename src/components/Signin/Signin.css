@@ -1,9 +1,4 @@
-.mt3{
-    height: 60px;
-    background-color: rgb(58, 35, 44);
-}
-
-.mv3{
+.bg{
     height: 60px;
     background-color: rgb(58, 35, 44);
 }
@@ -26,34 +21,16 @@
 	height: 100vh;
 }
 
-/* p {
-
-	position: relative;
-	max-width: 30em;
-	background-color: #fff;
-	padding: 1.125em 1.5em;
-	font-size: 1.25em;
-	border-radius: 0.5rem;
-
+@media (max-width:500px) {
+	.full-box {
+		background-size:cover;
+		background-position: bottom 0px right -550px ;
+	}
 }
 
-p::before {
-
-	content: '';
-	position: absolute;
-	width: 0;
-	height: 0;
-	bottom: 100%;
-	left: 1.5em; 
-	border: .75rem solid transparent;
-	border-top: none;
-
-
-	border-bottom-color: #fff;
-	filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
-} */
-
-/* body{
-    background-image: url("./Screenshot\ 2022-08-17\ 114835.png");
-    background-repeat: no-repeat;
-} */
+@media (min-width:500px) {
+	.full-box {
+		background-size:cover;
+		background-position: bottom right;
+	}
+}

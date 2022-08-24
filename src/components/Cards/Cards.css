@@ -1,17 +1,3 @@
  .card {
     background: white;
 } 
-
-img {
-    width: auto;
-    height: 150px;
-}
-
-.parent {
-    flex: 5;
-    flex-wrap: 'wrap';
-    flex-direction: 'row';
-}
-.child {
-    flex-basis: '50%';
-}
