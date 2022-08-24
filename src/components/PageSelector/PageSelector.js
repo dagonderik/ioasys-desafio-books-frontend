@@ -1,7 +1,8 @@
 import React from 'react';
 import { BsFillArrowLeftCircleFill ,BsFillArrowRightCircleFill } from "react-icons/bs";
+import PropTypes from 'prop-types';
 
-const Navigation = ({ bookList, changePage }) =>{
+const PageSelector = ({ bookList, changePage }) =>{
     return(
     <nav style={{display: 'flex', justifyContent: 'flex-end'}}>
         <p className='f3 black pa3'>
@@ -17,5 +18,15 @@ const Navigation = ({ bookList, changePage }) =>{
     )
 }
 
+PageSelector.propTypes = {
+    /**
+     * bookList holds the list of books got from the API
+     */
+    bookList: PropTypes.string,
+    /**
+     * changePage controls which page in the list of books is showing at the moment
+     */
+    changePage: PropTypes.func
+}
 
-export default Navigation;
+export default PageSelector;

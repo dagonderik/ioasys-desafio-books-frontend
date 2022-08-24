@@ -2,6 +2,7 @@ import React from 'react';
 import './Signin.css';
 import img from './background.png';
 import logo from '../../Public/logo.png';
+import PropTypes from 'prop-types';
 
 const Signin = ({ onEmailChange, onPasswordChange, onSubmit }) =>{
     return (
@@ -33,5 +34,19 @@ const Signin = ({ onEmailChange, onPasswordChange, onSubmit }) =>{
     );
 }
 
+Signin.propTypes = {
+    /**
+     * onEmailChange updates the email state used to validation with the API
+     */
+    onEmailChange: PropTypes.func,
+    /**
+     * onPasswordChange updates the password state used to validation with the API
+     */
+    onPasswordChange: PropTypes.func,
+    /**
+     * onSubmit calls the API to validate login and get the list of books used on the application
+     */
+    onSubmit: PropTypes.func,
+}
 
 export default Signin;

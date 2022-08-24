@@ -1,5 +1,7 @@
 import React from 'react';
-import './Cards.css'
+import './Cards.css';
+import PropTypes from 'prop-types';
+
 
 const Cards = ({authors, title, pageCount, publisher, published, imageUrl, onRouteChange, id}) => {
     return (
@@ -19,6 +21,43 @@ const Cards = ({authors, title, pageCount, publisher, published, imageUrl, onRou
             </div>
         </div>
     );
+}
+
+Cards.propTypes = {
+    /**
+     * authors holds an array of all the authors of this book
+     */
+    authors: PropTypes.array,
+    /**
+     * title holds the book title
+     */
+    title: PropTypes.string,
+    /**
+     * pageCount holds the number of pages of this book
+     */
+    pageCount: PropTypes.number,
+     /**
+     * publisher holds the information about the publisher of the book
+     */
+    publisher: PropTypes.string,
+    /**
+     * published holds the information about the year in which the book was published
+     */
+    published: PropTypes.string,
+     /**
+     * imageUrl holds the link to the book cover image
+     */
+    imageUrl: PropTypes.string,
+    /**
+     * onRouteChange is a funtion that receives a value to determine which screen to show
+     */
+    onRouteChange: PropTypes.func,
+     /**
+     * id holds a number to identify the position of the book in the array
+     */
+    id: PropTypes.number
+    
+    
 }
 
 export default Cards;

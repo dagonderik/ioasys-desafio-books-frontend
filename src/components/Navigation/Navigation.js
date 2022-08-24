@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../../Public/logo2.png';
 import {RiLogoutCircleLine} from 'react-icons/ri';
+import PropTypes from 'prop-types';
 
 const Navigation = ({ onRouteChange, user }) =>{
     return(
@@ -19,5 +20,15 @@ const Navigation = ({ onRouteChange, user }) =>{
     )
 }
 
+Navigation.propTypes = {
+    /**
+     * onRouteChange is a funtion that receives a value to determine which screen to show
+     */
+    onRouteChange: PropTypes.func,
+    /**
+     * user holds all the information about the user got from the API, used here to grab the user name
+     */
+    user: PropTypes.object,
+}
 
 export default Navigation;

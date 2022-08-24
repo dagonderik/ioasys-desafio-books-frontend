@@ -1,5 +1,11 @@
 import React from 'react';
-import './BookInformation.css'
+import './BookInformation.css';
+import PropTypes from 'prop-types'
+
+/**
+ * Component used to draw information of the selected book
+ * 
+ */
 
 const BookInformation = ({route, bookList}) => {
     return (
@@ -29,6 +35,13 @@ const BookInformation = ({route, bookList}) => {
             </div>
         </div>
     );
+}
+
+BookInformation.propTypes = {
+    /** route holds the position of the book on the bookList array */
+    route: PropTypes.number,
+    /** bookList holds the list of books got from the API*/
+    bookList: PropTypes.array
 }
 
 export default BookInformation;

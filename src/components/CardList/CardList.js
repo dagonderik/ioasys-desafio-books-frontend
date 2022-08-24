@@ -1,5 +1,11 @@
 import React from 'react';
 import Cards from '../Cards/Cards.js';
+import PropTypes from 'prop-types'
+
+/**
+ * Component used to create the List of cards displaying the books
+ * 
+ */
 
 const CardList = ({bookList, onRouteChange}) => {
     return (
@@ -23,6 +29,17 @@ const CardList = ({bookList, onRouteChange}) => {
             }
         </div>
     )
+}
+
+CardList.propTypes = {
+    /**
+     * bookList holds the list of books got from the API
+     */
+    bookList: PropTypes.array,
+    /**
+     * onRouteChange is a funtion that receives a value to determine which screen to show
+     */
+    onRouteChange: PropTypes.func
 }
 
 export default CardList;
