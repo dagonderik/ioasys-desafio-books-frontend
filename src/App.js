@@ -4,7 +4,6 @@ import Signin from './components/Signin/Signin';
 import axios from 'axios';
 import Home from './components/Home/Home';
 import ReactModal from 'react-modal';
-//import { hasPointerEvents } from '@testing-library/user-event/dist/utils';
 
 
 class App extends Component {
@@ -13,14 +12,13 @@ class App extends Component {
     super();
     this.state = {
     showModal: false,
-    route: "login", 
-    color: "linear-gradient(89deg, rgb(116, 5, 38) 0%, rgb(210, 63, 240) 100%)",
-    isSignedIn: false,
+    route: window.localStorage.getItem('route'), 
+    color: "linear-gradient(89deg, rgb(241, 239, 239) 0%, rgb(240, 209, 247) 100%)",
     email: "",
     password: "",
-    user: "",
-    token: "",
-    bookList: {},
+    user: JSON.parse(window.localStorage.getItem('user')),
+    token: window.localStorage.getItem('token'),
+    bookList: JSON.parse(window.localStorage.getItem('bookList')),
     page: 1
     }
   }
@@ -60,18 +58,33 @@ class App extends Component {
   }
 
   pageUpdate =(page) => {
-    this.onSubmit();
+    axios.get(`https://books.ioasys.com.br/api/v1/books?page=${page}}&amount=12`,{
+          headers: { Authorization: `Bearer ${this.state.token}` 
+          }
+        })
+        .then((response) => {
+          this.setState({bookList: response.data});
+          this.onRouteChange('home');
+        })
+        .catch((err) => {
+          if (err.response.statusText === "Unauthorized") {
+            alert("Email e/ou senha incorretos.")
+          }
+        })   
   }
 
   componentDidMount() {
     ReactModal.setAppElement('body');
-}
+  }
 
   onRouteChange = (route) => { 
     if(route === "login"){
       this.setState({route: route});
       this.setState({password: ""});
       this.setState({email: ""});
+      this.setState({page: 1})
+      window.localStorage.setItem('route', route);
+      window.localStorage.setItem('token', "");
     } else 
       if (route === "home"){
         this.setState({route: route});
@@ -88,12 +101,16 @@ class App extends Component {
     const body = { 
         email: this.state.email,
         password: this.state.password
-      }
-  
+    }
+
+    console.log(this.state.token);
+
     axios.post("https://books.ioasys.com.br/api/v1/auth/sign-in", body)
       .then((res) => {
         this.setState({user: res});
-        this.setState({token: res.headers.authorizaton});
+        window.localStorage.setItem('user', JSON.stringify(res));
+        this.setState({token: res.headers.authorization});
+        window.localStorage.setItem('token', res.headers.authorization);
         return axios.get(`https://books.ioasys.com.br/api/v1/books?page=${this.state.page}}&amount=12`,{
           headers: { Authorization: `Bearer ${res.headers.authorization}` 
           }
@@ -103,8 +120,9 @@ class App extends Component {
       })
       .then((response) => {
         this.setState({bookList: response.data});
-        console.log(response.data);
+        window.localStorage.setItem('bookList', JSON.stringify(response.data));
         this.onRouteChange('home');
+        window.localStorage.setItem('route', 'home');
       })
       .catch((err) => {
         if (err.response.statusText === "Unauthorized") {
@@ -116,15 +134,16 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-        {this.state.route === "login"
+        {this.state.route === "login" || this.state.route === null
         ?<Signin 
         onSubmit={this.onSubmit}
         onEmailChange={this.onEmailChange}
         onPasswordChange={this.onPasswordChange}
         route={this.state.route}
-        color={this.state.color}
-        />
-          :<Home 
+        color={this.state.color}/>
+          :
+          <Home 
+          onSubmit={this.onSubmit}
           showModal={this.state.showModal}
           handleCloseModal={this.handleCloseModal}
           route={this.state.route}

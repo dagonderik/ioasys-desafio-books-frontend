@@ -2,6 +2,10 @@ import React from 'react';
 import { BsFillArrowLeftCircleFill ,BsFillArrowRightCircleFill } from "react-icons/bs";
 import PropTypes from 'prop-types';
 
+/**
+ * PageSelector holds the buttons and information about the number of pages in the bookList
+ */
+
 const PageSelector = ({ bookList, changePage }) =>{
     return(
     <nav style={{display: 'flex', justifyContent: 'flex-end'}}>

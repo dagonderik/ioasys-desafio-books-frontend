@@ -8,6 +8,10 @@ import BookInformation from '../BookInformation/BookInformation';
 import {AiOutlineCloseCircle} from 'react-icons/ai';
 import PropTypes from 'prop-types';
 
+/**
+ * Component that renders the main screen of the app, it controls what will be draw based on the value of "route"
+ */
+
 const modalConfig = {
     overlay: {
       position: 'fixed',
@@ -38,37 +42,26 @@ const Home = ({ onRouteChange, color, bookList, user, route, showModal, handleCl
 
     return(
         <div className="full-box"style={{background: color}}>
-            {route === "Home"
-            ?<><Navigation
-                    user={user}
-                    onRouteChange={onRouteChange} />
-                    <CardList bookList={bookList.data}
-                    onRouteChange={onRouteChange} />
-                    <PageSelector bookList={bookList} />
-                    </>
-                :<><Navigation
-                    user={user}
-                    onRouteChange={onRouteChange} />
-                    <CardList 
-                    bookList={bookList.data}
-                    onRouteChange={onRouteChange} />
-                    <PageSelector 
-                    onRouteChange={onRouteChange}
-                    bookList={bookList}
-                    changePage={changePage}/>
-                    <ReactModal 
-                    onRequestClose={handleCloseModal}
-                    appElement={document.getElementById('app')}
-                    style={modalConfig}
-                    isOpen={showModal}
-                    contentLabel="Book Details">
-                        <AiOutlineCloseCircle style={{ position: "absolute", right:"0", width:"30", height:"30" }}  onClick={handleCloseModal}/>
-                        <BookInformation
-                        route={route}
-                        bookList={bookList.data}/>
-                    </ReactModal>
-                </>
-            }
+            <Navigation
+            user={user}
+            onRouteChange={onRouteChange} />
+            <CardList 
+            bookList={bookList.data}
+            onRouteChange={onRouteChange} />
+            <PageSelector 
+            bookList={bookList}
+            changePage={changePage}/>
+            <ReactModal 
+            onRequestClose={handleCloseModal}
+            appElement={document.getElementById('app')}
+            style={modalConfig}
+            isOpen={showModal}
+            contentLabel="Book Details">
+                <AiOutlineCloseCircle style={{ position: "absolute", right:"0", width:"30", height:"30" }}  onClick={handleCloseModal}/>
+                <BookInformation
+                route={route}
+                bookList={bookList.data}/>
+            </ReactModal>
         </div>
     )
 }

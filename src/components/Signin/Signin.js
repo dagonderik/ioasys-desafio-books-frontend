@@ -4,6 +4,10 @@ import img from './background.png';
 import logo from '../../Public/logo.png';
 import PropTypes from 'prop-types';
 
+/**
+ * SignIn draws the first screen shown to the user, in it the user can login on the API server to access the rest of the app
+ */
+
 const Signin = ({ onEmailChange, onPasswordChange, onSubmit }) =>{
     return (
     <div className=" full-box" style={{backgroundImage: `url(${img})`}}>

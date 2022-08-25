@@ -3,6 +3,10 @@ import logo from '../../Public/logo2.png';
 import {RiLogoutCircleLine} from 'react-icons/ri';
 import PropTypes from 'prop-types';
 
+/**
+ * Navigation controls and draws the elements of the navigation bar
+ */
+
 const Navigation = ({ onRouteChange, user }) =>{
     return(
     <nav style={{display: 'flex', justifyContent: 'space-between'}}>

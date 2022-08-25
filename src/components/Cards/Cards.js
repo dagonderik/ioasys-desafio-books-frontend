@@ -2,7 +2,9 @@ import React from 'react';
 import './Cards.css';
 import PropTypes from 'prop-types';
 
-
+/**
+ * Component used to creat a Card for each book with basic information, the card is rendered individually 
+ */
 const Cards = ({authors, title, pageCount, publisher, published, imageUrl, onRouteChange, id}) => {
     return (
         <div data-testid="Cards" key={id} onClick={() => onRouteChange(id)}
