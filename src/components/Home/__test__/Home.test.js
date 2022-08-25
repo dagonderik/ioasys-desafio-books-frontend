@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from 'react-dom';
 import Home from "../Home";
-import renderer from "react-test-renderer";
 
 const userTest = {
     data:{
@@ -32,8 +31,6 @@ const bookTest1={
     totalPages:1,
 }
 
-
-
 it("renders without crashing", () => {  
     const div = document.createElement("div");
     ReactDOM.render(<Home
@@ -41,21 +38,7 @@ it("renders without crashing", () => {
     color=""
     bookList={bookTest1}
     user={userTest}
-    route="route"
+    route= {0}
     showModal={()=>{}}
     changePage={()=>{}}></Home>,div)
 })
-
-// it("renders without crashing", () => {
-//     const div = document.createElement("div");
-//     ReactDOM.render(<Home
-//     onRouteChange={()=>{}}
-//     color=""
-//     bookList={{}}
-//     user={userTest}
-//     route="route"
-//     showModal={true}
-//     handleCloseModal={()=>{}}
-//     changePage={()=>{}}
-//     ></Home>,div)
-// })
