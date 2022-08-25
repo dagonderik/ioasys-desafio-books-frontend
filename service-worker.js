@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/ioasys-desafio-books-frontend/precache-manifest.314d2fcc4906c5ea4f9fa8fbac6027db.js"
+  "/ioasys-desafio-books-frontend/precache-manifest.7be73784a5294a62830dbd645d6249a1.js"
 );
 
 workbox.clientsClaim();
