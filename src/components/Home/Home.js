@@ -34,7 +34,6 @@ const modalConfig = {
   }
 
   
-
 const Home = ({ onRouteChange, color, bookList, user, route, showModal, handleCloseModal, changePage}) =>{
 
     return(

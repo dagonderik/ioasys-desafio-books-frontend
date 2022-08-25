@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div>
+  <div
+    className="card tc white dib br3 pa3 ma2 pointer grow shadow-5 card"
+    data-testid="Cards"
+    onClick={[Function]}
+    style={
+      Object {
+        "height": "auto",
+        "margin": "10px",
+        "maxWidth": "500px",
+        "minWidth": "400px",
+        "textAlign": "left",
+      }
+    }
+  >
+    <img
+      alt=""
+      src="imageURL"
+      style={
+        Object {
+          "align": "center",
+          "display": "inline-block",
+          "height": "150px",
+          "verticalAlign": "middle",
+        }
+      }
+    />
+    <div
+      style={
+        Object {
+          "display": "inline-block",
+          "marginLeft": "10px",
+          "verticalAlign": "middle",
+        }
+      }
+    >
+      <h2
+        className="black f4"
+      >
+        title
+      </h2>
+      <p
+        className="red f7"
+      >
+        authors
+        <br />
+      </p>
+      <p
+        className="black-50 f7"
+      >
+         
+        1
+         
+         páginas
+         
+        <br />
+        publisher
+        <br />
+        published
+      </p>
+    </div>
+  </div>
+  <div
+    className="card tc white dib br3 pa3 ma2 pointer grow shadow-5 card"
+    data-testid="Cards"
+    onClick={[Function]}
+    style={
+      Object {
+        "height": "auto",
+        "margin": "10px",
+        "maxWidth": "500px",
+        "minWidth": "400px",
+        "textAlign": "left",
+      }
+    }
+  >
+    <img
+      alt=""
+      src="imageURL"
+      style={
+        Object {
+          "align": "center",
+          "display": "inline-block",
+          "height": "150px",
+          "verticalAlign": "middle",
+        }
+      }
+    />
+    <div
+      style={
+        Object {
+          "display": "inline-block",
+          "marginLeft": "10px",
+          "verticalAlign": "middle",
+        }
+      }
+    >
+      <h2
+        className="black f4"
+      >
+        title
+      </h2>
+      <p
+        className="red f7"
+      >
+        authors
+        <br />
+      </p>
+      <p
+        className="black-50 f7"
+      >
+         
+        1
+         
+         páginas
+         
+        <br />
+        publisher
+        <br />
+        published
+      </p>
+    </div>
+  </div>
+  <div
+    className="card tc white dib br3 pa3 ma2 pointer grow shadow-5 card"
+    data-testid="Cards"
+    onClick={[Function]}
+    style={
+      Object {
+        "height": "auto",
+        "margin": "10px",
+        "maxWidth": "500px",
+        "minWidth": "400px",
+        "textAlign": "left",
+      }
+    }
+  >
+    <img
+      alt=""
+      src="imageURL"
+      style={
+        Object {
+          "align": "center",
+          "display": "inline-block",
+          "height": "150px",
+          "verticalAlign": "middle",
+        }
+      }
+    />
+    <div
+      style={
+        Object {
+          "display": "inline-block",
+          "marginLeft": "10px",
+          "verticalAlign": "middle",
+        }
+      }
+    >
+      <h2
+        className="black f4"
+      >
+        title
+      </h2>
+      <p
+        className="red f7"
+      >
+        authors
+        <br />
+      </p>
+      <p
+        className="black-50 f7"
+      >
+         
+        1
+         
+         páginas
+         
+        <br />
+        publisher
+        <br />
+        published
+      </p>
+    </div>
+  </div>
+</div>
+`;

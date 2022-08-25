@@ -103,6 +103,7 @@ class App extends Component {
       })
       .then((response) => {
         this.setState({bookList: response.data});
+        console.log(response.data);
         this.onRouteChange('home');
       })
       .catch((err) => {

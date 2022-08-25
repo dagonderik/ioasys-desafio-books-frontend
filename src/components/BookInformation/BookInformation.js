@@ -10,8 +10,7 @@ import PropTypes from 'prop-types'
 const BookInformation = ({route, bookList}) => {
     return (
         <div id='bookList'>
-            <img alt='' src={`${bookList[route].imageUrl}`} style={{display:"inline-block", maxWidth:"30vh", height:"10%", align: "center",verticalAlign: "middle"}} />
-        
+            <img alt='' src={`${bookList[route].imageUrl}`} style={{display:"inline-block", maxWidth:"30vh", height:"10%", align: "center",verticalAlign: "middle"}} />        
             <div style={{ display:"inline-block", verticalAlign: "middle", marginLeft: "10px"}}>
             <h1 className='black f1'>{bookList[route].title}</h1>
             <p className='hot-pink f4'>

@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  id="bookList"
+>
+  <img
+    alt=""
+    src="imageURL"
+    style={
+      Object {
+        "align": "center",
+        "display": "inline-block",
+        "height": "10%",
+        "maxWidth": "30vh",
+        "verticalAlign": "middle",
+      }
+    }
+  />
+  <div
+    style={
+      Object {
+        "display": "inline-block",
+        "marginLeft": "10px",
+        "verticalAlign": "middle",
+      }
+    }
+  >
+    <h1
+      className="black f1"
+    >
+      title
+    </h1>
+    <p
+      className="hot-pink f4"
+    >
+      authors
+        
+    </p>
+    <div>
+      <p
+        className="f4 b black"
+      >
+        INFORMAÇÕES
+        <br />
+      </p>
+      <p
+        style={
+          Object {
+            "display": "flex",
+            "justifyContent": "space-between",
+          }
+        }
+      >
+        <b>
+          Páginas
+        </b>
+         
+        1
+      </p>
+      <p
+        style={
+          Object {
+            "display": "flex",
+            "justifyContent": "space-between",
+          }
+        }
+      >
+        <b>
+          Editora
+        </b>
+         
+        publisher
+      </p>
+      <p
+        style={
+          Object {
+            "display": "flex",
+            "justifyContent": "space-between",
+          }
+        }
+      >
+        <b>
+          Publicação
+        </b>
+         
+        published
+      </p>
+      <p
+        style={
+          Object {
+            "display": "flex",
+            "justifyContent": "space-between",
+          }
+        }
+      >
+        <b>
+          Idioma
+        </b>
+         
+      </p>
+      <p
+        style={
+          Object {
+            "display": "flex",
+            "justifyContent": "space-between",
+          }
+        }
+      >
+        <b>
+          Título Original
+        </b>
+         
+        title
+      </p>
+      <p
+        style={
+          Object {
+            "display": "flex",
+            "justifyContent": "space-between",
+          }
+        }
+      >
+        <b>
+          ISBN-10
+        </b>
+         
+      </p>
+      <p
+        style={
+          Object {
+            "display": "flex",
+            "justifyContent": "space-between",
+          }
+        }
+      >
+        <b>
+          ISBN-13
+        </b>
+         
+      </p>
+      <p
+        className="f4 b black"
+      >
+        RESENHA DA EDITORA
+      </p>
+      <p
+        className="f5"
+        style={
+          Object {
+            "position": "absolute",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;

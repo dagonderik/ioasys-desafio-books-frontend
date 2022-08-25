@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const Cards = ({authors, title, pageCount, publisher, published, imageUrl, onRouteChange, id}) => {
     return (
-        <div key={id} onClick={() => onRouteChange(id)}
+        <div data-testid="Cards" key={id} onClick={() => onRouteChange(id)}
          className= 'card tc white dib br3 pa3 ma2 pointer grow shadow-5 card' 
          style={{height: "auto", maxWidth: "500px", minWidth: "400px", textAlign: "left", margin: "10px"}}  >
             <img alt='' src={`${imageUrl}`} style={{display:"inline-block", height:"150px", align: "center",verticalAlign: "middle"}} />

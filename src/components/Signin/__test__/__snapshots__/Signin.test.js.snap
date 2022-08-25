@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className=" full-box"
+  style={
+    Object {
+      "backgroundImage": "url(background.png)",
+    }
+  }
+>
+  <div
+    className="login-box"
+  >
+    <div
+      className="measure"
+    >
+      <fieldset
+        className="b--transparent ph0 mh0"
+        id="sign_up"
+      >
+        <legend
+          className="white tl f1 ph0 mh0"
+        >
+          <img
+            alt="logo"
+            className="pr2"
+            src="logo.png"
+            style={
+              Object {
+                "height": 50,
+                "position": "relative",
+                "top": 11,
+                "width": 150,
+              }
+            }
+          />
+          Books
+        </legend>
+        <div
+          className="mt3 bg br2"
+        >
+          <label
+            className="pa1 pl2 db white-50 tl fw6 lh-copy f7"
+            htmlFor="email-address"
+          >
+            Email
+          </label>
+          <input
+            className="b content-start pa2 input-reset ba bg-transparent white fl w-100"
+            id="email-address"
+            name="email-address"
+            onChange={[Function]}
+            type="email"
+          />
+        </div>
+        <div
+          className="mt3 bg br2"
+        >
+          <label
+            className="pa1 pl2 db white-50 tl fw6 lh-copy f7"
+            htmlFor="password"
+          >
+            Senha
+          </label>
+          <input
+            className="b pa2 input-reset ba bg-transparent white fl w-70"
+            id="password"
+            name="password"
+            onChange={[Function]}
+            type="password"
+          />
+          <button
+            className="b relative enter input-reset br4 b--transparent bg-white grow dark-pink pointer w-10"
+            onClick={[Function]}
+            type="submit"
+          >
+            Entrar
+          </button>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+</div>
+`;
