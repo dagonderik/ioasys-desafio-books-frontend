@@ -23,7 +23,7 @@ const Cards = ({
       className="card tc white dib br3 pa3 ma2 pointer grow shadow-5 card"
       style={{
         height: "auto",
-        maxWidth: "500px",
+        maxWidth: "400px",
         minWidth: "400px",
         textAlign: "left",
         margin: "10px",
@@ -41,12 +41,22 @@ const Cards = ({
       />
       <div
         style={{
+          maxWidth: "190px",
           display: "inline-block",
           verticalAlign: "middle",
           marginLeft: "10px",
         }}
       >
-        <h2 className="black f4">{title}</h2>
+        <h2
+          style={{
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+          }}
+          className="black f4"
+        >
+          {title}
+        </h2>
         <p className="red f7">
           {authors.map((user, i) => {
             return (

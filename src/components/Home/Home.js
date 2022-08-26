@@ -68,6 +68,7 @@ class Home extends React.Component {
           >
             <AiOutlineCloseCircle
               style={{
+                marginRight: "20px",
                 position: "absolute",
                 right: "0",
                 width: "30",

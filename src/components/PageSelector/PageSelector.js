@@ -11,7 +11,7 @@ import PropTypes from "prop-types";
 
 const PageSelector = ({ bookList, changePage }) => {
   return (
-    <nav style={{ display: "flex", justifyContent: "flex-end" }}>
+    <nav style={{ display: "flex", justifyContent: "flex-end", marginRight: "40px"}}>
       <p className="f3 black pa3">
         Página {bookList.page} de {Math.ceil(bookList.totalPages)} <> </>
         <span
