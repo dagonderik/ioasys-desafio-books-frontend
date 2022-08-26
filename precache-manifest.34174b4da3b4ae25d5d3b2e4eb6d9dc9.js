@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "6b4256af65853f37ea1d",
+    "revision": "5bc0127f5438918f08fe",
     "url": "/ioasys-desafio-books-frontend/static/css/main.86a8a174.chunk.css"
   },
   {
-    "revision": "6b4256af65853f37ea1d",
-    "url": "/ioasys-desafio-books-frontend/static/js/main.5252d234.chunk.js"
+    "revision": "5bc0127f5438918f08fe",
+    "url": "/ioasys-desafio-books-frontend/static/js/main.1510792c.chunk.js"
   },
   {
     "revision": "35637b0ac44c9df1d536",
@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/ioasys-desafio-books-frontend/static/media/background.5ed0fb9c.png"
   },
   {
-    "revision": "24402ab6b48f4679bd34c2ccbf757748",
+    "revision": "e3555c73e00ac3973a1b85f11024b639",
     "url": "/ioasys-desafio-books-frontend/index.html"
   }
 ];
